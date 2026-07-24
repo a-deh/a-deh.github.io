@@ -20,5 +20,26 @@
 <div id="myDiv">
   <p>This content will disappear when you click the button.</p>
 </div>
+<!-- The Media Element (Works identically for <audio>) -->
+<video id="myMedia" width="320" src="your-video-file.mp4"></video>
+
+<!-- Custom Toggle Button -->
+<button id="toggleBtn" onclick="togglePlayPause()">Play</button>
+
+<script>
+function togglePlayPause() {
+  const media = document.getElementById("myMedia");
+  const button = document.getElementById("toggleBtn");
+
+  // Check the state of the media element
+  if (media.paused) {
+    media.play();
+    button.textContent = "Pause";
+  } else {
+    media.pause();
+    button.textContent = "Play";
+  }
+}
+</script>
 
 </body>
